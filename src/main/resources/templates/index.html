@@ -9,6 +9,11 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
+    <ul>
+<!--        <li th:each="planet : ${planets}" th:value="${planet}" th:text="${planet.values}"></li>-->
+        <li th:each="planet : ${planets}" th:text="${planet}"></li>
+    </ul>
 
 </body>
 </html>
+
