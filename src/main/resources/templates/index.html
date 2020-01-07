@@ -8,11 +8,25 @@
 
 </head>
 <body>
-<h1>Pick a planet:</h1>
-    <ul>
-<!--        <li th:each="planet : ${planets}" th:value="${planet}" th:text="${planet.values}"></li>-->
-        <li th:each="planet : ${planets}" th:text="${planet.name}"></li>
-    </ul>
+<h1>Planets and their mass</h1>
+<table class="centeredTable">
+    <tr>
+        <th id="planet">Planet Name</th>
+        <th id="years">Length of Year</th>
+    </tr>
+    <tr th:each="planet : ${planets}">
+        <td>
+<!--            <ul th:each="planet : ${planets}" th:text="${planet.name} + ' ' + ${planet.lightYear}"></ul>-->
+            <ul th:text="${planet.name}"></ul>
+        </td>
+        <td>
+            <ul th:text="${planet.yearLength}"></ul>
+        </td>
+    </tr>
+</table>
+<!--    <ul>-->
+<!--        <li th:each="planet : ${planets}" th:text="${planet.name}"></li>-->
+<!--    </ul>-->
 
 </body>
 </html>
